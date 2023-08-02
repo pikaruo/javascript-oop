@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function Emply(name) {
+            this.name = name
+        }
+        function Manager(name) {
+            this.name = name
+        }
+
+        // Manager.prototype = Emply.prototype // penulisan salah
+        Manager.prototype = Object.create(Emply.prototype)
+
+        Manager.prototype.sayHello = function (name) {
+            console.info(`Hello ${name}, Saya manager ${this.name}`)
+        }
+
+        Emply.prototype.sayHello = function (name) {
+            console.info(`Hello ${name}, Saya employer ${this.name}`)
+        }
+
+        const employer = new Emply("Pina")
+        employer.sayHello("Ruo")
+
+        const mg = new Manager("Rui")
+        mg.sayHello("Pika")
+
+        console.info(employer)
+        console.info(mg)
+
+    </script>
+</body>
+
+</html>
