@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Employ { }
+        class Manager extends Employ { }
+
+        const em = new Employ()
+        const mg = new Manager()
+
+        console.info(typeof em)
+        console.info(typeof mg)
+
+        console.info(em instanceof Employ)
+        console.info(em instanceof Manager)
+        console.info(mg instanceof Employ)
+        console.info(mg instanceof Manager)
+
+    </script>
+</body>
+
+</html>

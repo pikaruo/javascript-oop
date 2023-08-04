@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class Empoley {
+            sayHello(name) {
+                console.info(`Halo ${name}, saya adalah pegawai ${this.name}`)
+            }
+        }
+
+        class Manager extends Empoley {
+            sayHello(name) {
+                console.info(`Hello ${name}, saya adalah manager ${this.name}`)
+            }
+        }
+
+        const Pina = new Empoley
+        Pina.name = "Pina"
+        Pina.sayHello("Pikaruo")
+        console.info(Pina)
+
+        const Ruo = new Manager
+        Ruo.name = "Ruo"
+        Ruo.sayHello("Pina")
+        console.info(Ruo)
+
+    </script>
+</body>
+
+</html>

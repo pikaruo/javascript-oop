@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class Empoley {
+
+            constructor(firstName) {
+                this.firstName = firstName
+            }
+
+            sayHello(name) {
+                console.info(`Halo ${name}, saya adalah pegawai ${this.firstName}`)
+            }
+        }
+
+        class Manager extends Empoley {
+
+            constructor(firstName, lastName) {
+                super(firstName)
+                this.lastName = lastName
+            }
+
+            sayHello(name) {
+                console.info(`Hello ${name}, saya adalah manager ${this.firstName}${this.lastName}`)
+            }
+        }
+
+        const Pina = new Empoley("Pina")
+        Pina.sayHello("Pikaruo")
+        console.info(Pina)
+
+        const Ruo = new Manager("Pika", "Ruo")
+        Ruo.sayHello("Pina")
+        console.info(Ruo)
+
+    </script>
+</body>
+
+</html>
